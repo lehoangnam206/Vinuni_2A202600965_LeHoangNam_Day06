@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng - Nhặt Đồ (Picker)</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            background: #e9ecef; display: flex; justify-content: center; align-items: center; 
+            height: 100vh; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+        }
+        .mobile-frame {
+            width: 375px; height: 812px; background: #f8f9fa; border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2); border: 12px solid #212529; position: relative;
+            display: flex; flex-direction: column; overflow: hidden;
+        }
+        .header { background: #ff9800; color: white; padding: 20px; text-align: center; font-weight: bold; font-size: 18px; padding-top: 40px; }
+        .order-info { padding: 15px; background: white; border-bottom: 1px solid #dee2e6; margin-bottom: 10px; }
+        .order-info h3 { font-size: 16px; margin-bottom: 5px; color: #333; }
+        .order-info p { font-size: 14px; color: #666; }
+        
+        .item-list { flex: 1; padding: 15px; overflow-y: auto; }
+        .item { background: white; padding: 15px; border-radius: 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .item.picked { opacity: 0.6; background: #e8f5e9; }
+        .item-info h4 { font-size: 15px; margin-bottom: 4px; color: #212529; }
+        .item-info p { font-size: 13px; color: #6c757d; font-weight: bold; }
+        .btn-pick { background: #ff9800; color: white; border: none; padding: 8px 15px; border-radius: 20px; font-weight: bold; cursor: pointer; }
+        .item.picked .btn-pick { background: #4caf50; pointer-events: none; }
+        
+        .footer { padding: 20px; background: white; border-top: 1px solid #dee2e6; }
+        .btn-ready { width: 100%; background: #4caf50; color: white; border: none; padding: 15px; border-radius: 12px; font-size: 16px; font-weight: bold; cursor: pointer; display: none; }
+    </style>
+</head>
+<body>
+<div class="mobile-frame">
+    <div class="header">App Quản Lý (Picker)</div>
+    
+    <div class="order-info">
+        <h3>Đơn hàng: #BHX-98234</h3>
+        <p>Khách hàng: Lan (Nhận trong 30 phút)</p>
+    </div>
+
+    <div class="item-list">
+        <div class="item" id="item1">
+            <div class="item-info">
+                <h4>Thịt heo băm VietGAP</h4>
+                <p>Số lượng: 400g</p>
+            </div>
+            <button class="btn-pick" onclick="pickItem(1)">Nhặt</button>
+        </div>
+        
+        <div class="item" id="item2">
+            <div class="item-info">
+                <h4>Cà chua Đà Lạt</h4>
+                <p>Số lượng: 300g</p>
+            </div>
+            <button class="btn-pick" onclick="pickItem(2)">Nhặt</button>
+        </div>
+
+        <div class="item" id="item3">
+            <div class="item-info">
+                <h4>Hành lá, ngò rí</h4>
+                <p>Số lượng: 100g</p>
+            </div>
+            <button class="btn-pick" onclick="pickItem(3)">Nhặt</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button class="btn-ready" id="btnReady" onclick="handover()">Đóng gói & Gọi Shipper</button>
+    </div>
+</div>
+
+<script>
+    let pickedCount = 0;
+    function pickItem(id) {
+        let item = document.getElementById('item' + id);
+        item.classList.add('picked');
+        item.querySelector('.btn-pick').innerText = "✓ Đã lấy";
+        pickedCount++;
+        
+        if (pickedCount === 3) {
+            document.getElementById('btnReady').style.display = 'block';
+        }
+    }
+
+    function handover() {
+        document.getElementById('btnReady').innerText = "Đang tìm tài xế...";
+        document.getElementById('btnReady').style.background = "#ff9800";
+        setTimeout(() => {
+            document.getElementById('btnReady').innerText = "Tài xế AhaMove đang tới!";
+            document.getElementById('btnReady').style.background = "#2196F3";
+        }, 1500);
+    }
+</script>
+</body>
+</html>

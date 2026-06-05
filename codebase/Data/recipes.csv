@@ -1,0 +1,51 @@
+﻿recipe_id,recipe_name,meal_type,difficulty,base_servings,estimated_time_min,tags
+R001,Đậu phụ sốt cà chua,Bữa tối,Dễ,2,20,"rẻ,nhanh,chay"
+R002,Trứng chiên hành,Bữa tối,Dễ,2,10,"rẻ,nhanh"
+R003,Canh chua cá,Bữa tối,Vừa,2,30,"gia đình,có thể không cay"
+R004,Thịt bò xào rau cải,Bữa tối,Dễ,2,20,giàu đạm
+R005,Canh rau cải thịt bằm,Bữa tối,Dễ,2,20,gia đình
+R006,Thịt heo xào nấm,Bữa tối,Dễ,2,25,món mặn
+R007,Gà rang gừng,Bữa tối,Vừa,2,30,món mặn
+R008,Cơm rang trứng,Bữa tối,Dễ,2,15,"nhanh,tận dụng đồ có sẵn"
+R009,Spaghetti bò bằm,Bữa tối,Vừa,2,30,món Âu
+R010,Lẩu Thái đơn giản,Bữa tối,Vừa,3,40,"cuối tuần,cay"
+R011,Canh bí đỏ thịt bằm,Bữa tối,Dễ,2,25,gia đình
+R012,Rau muống xào tỏi,Bữa tối,Dễ,2,10,"rẻ,nhanh"
+R013,Sườn non hầm khoai tây cà rốt,Bữa tối,Vừa,3,45,gia đình
+R014,Thịt ba chỉ kho tiêu,Bữa tối,Vừa,2,35,món mặn
+R015,Ức gà áp chảo salad,Bữa tối,Dễ,2,25,healthy
+R016,Tôm xào rau cải,Bữa tối,Dễ,2,20,giàu đạm
+R017,Mực xào hành tây,Bữa tối,Dễ,2,20,hải sản
+R018,Miến xào thịt bằm nấm,Bữa tối,Vừa,2,25,đổi bữa
+R019,Canh cải thảo đậu phụ,Bữa tối,Dễ,2,20,"nhẹ,chay"
+R020,Cá lóc kho tiêu,Bữa tối,Vừa,2,35,món mặn
+R021,Bún thịt heo xào,Bữa trưa,Vừa,2,25,đổi bữa
+R022,Bún bò xào rau,Bữa trưa,Vừa,2,25,giàu đạm
+R023,Bún cá đơn giản,Bữa trưa,Vừa,2,30,nước
+R024,Mì trứng xào bò,Bữa tối,Dễ,2,20,nhanh
+R025,Mì trứng xào rau nấm,Bữa tối,Dễ,2,20,chay nhẹ
+R026,Nui xào bò sốt cà chua,Bữa tối,Vừa,2,25,món Âu/Viet
+R027,Cơm gà gừng,Bữa tối,Vừa,2,30,món mặn
+R028,Thịt heo xay sốt cà chua,Bữa tối,Dễ,2,20,món mặn
+R029,Đậu phụ kho nấm,Bữa tối,Dễ,2,25,chay
+R030,Canh tôm cải thảo,Bữa tối,Dễ,2,20,nhẹ
+R031,Bò xào hành tây cà rốt,Bữa tối,Dễ,2,20,giàu đạm
+R032,Gà xào nấm kim châm,Bữa tối,Dễ,2,20,món mặn
+R033,Salad trứng rau củ,Bữa tối,Dễ,2,15,healthy
+R034,Canh chua tôm,Bữa tối,Vừa,2,30,gia đình
+R035,Thịt heo xào bắp cải,Bữa tối,Dễ,2,20,rẻ
+R036,Trứng sốt cà chua,Bữa tối,Dễ,2,15,"rẻ,nhanh"
+R037,Canh rau muống thịt bằm,Bữa tối,Dễ,2,20,gia đình
+R038,Cá lóc nấu dứa,Bữa tối,Vừa,2,30,canh
+R039,Gà hầm khoai tây cà rốt,Bữa tối,Vừa,3,45,gia đình
+R040,Đậu phụ chiên xì dầu,Bữa tối,Dễ,2,15,chay
+R041,Rau cải xào nấm,Bữa tối,Dễ,2,15,chay
+R042,Cơm thịt bò trứng,Bữa tối,Vừa,2,25,giàu năng lượng
+R043,Canh nấm đậu phụ,Bữa tối,Dễ,2,20,chay
+R044,Thịt ba chỉ xào dưa leo,Bữa tối,Dễ,2,20,món mặn
+R045,Bún tôm rau thơm,Bữa trưa,Vừa,2,25,nhẹ
+R046,Nui trứng cà chua,Bữa tối,Dễ,2,20,rẻ
+R047,Ức gà xào rau cải,Bữa tối,Dễ,2,20,healthy
+R048,Sườn non nấu canh chua,Bữa tối,Vừa,3,40,gia đình
+R049,Lẩu nấm chay đơn giản,Bữa tối,Vừa,3,35,chay
+R050,Cơm đậu phụ nấm sốt cà chua,Bữa tối,Dễ,2,25,"chay,rẻ"

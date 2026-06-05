@@ -1,0 +1,51 @@
+﻿ingredient_id,ingredient_name,category,package_qty,package_unit,price_vnd,available,is_clean_or_vietgap,possible_substitute,note
+I001,Gạo ST25,Tinh bột,1000,gram,35000,yes,yes,Gạo tẻ thường,"Cơm trắng, cơm rang"
+I002,Bún tươi,Tinh bột,500,gram,18000,yes,no,"Miến, mì",Bún ăn kèm/canh
+I003,Mì spaghetti,Tinh bột,500,gram,45000,yes,no,"Nui, mì trứng",Món Âu
+I004,Mì trứng,Tinh bột,400,gram,28000,yes,no,"Mì gói, nui",Món xào/nấu
+I005,Nui,Tinh bột,400,gram,32000,yes,no,Mì spaghetti,Món nui xào/nấu
+I006,Miến dong,Tinh bột,300,gram,35000,yes,no,Bún tươi,Canh miến/xào
+I007,Thịt heo xay,Thịt,300,gram,60000,yes,yes,Thịt gà xay,"Canh, sốt, xào"
+I008,Thịt ba chỉ heo,Thịt,500,gram,95000,yes,yes,Thịt nạc vai,"Kho, rang, luộc"
+I009,Thịt nạc vai heo,Thịt,500,gram,90000,yes,yes,Thịt ba chỉ,"Kho, xào"
+I010,Sườn non heo,Thịt,500,gram,120000,yes,yes,Thịt heo,"Canh, kho"
+I011,Thịt bò thái lát,Thịt,300,gram,85000,yes,no,"Thịt heo xay, ức gà",Xào/lẩu
+I012,Ức gà,Thịt,300,gram,65000,yes,yes,Đùi gà,"Healthy, áp chảo"
+I013,Đùi gà,Thịt,500,gram,75000,yes,yes,Ức gà,Kho/rang/luộc
+I014,Cá basa phi lê,Cá/Hải sản,300,gram,55000,no,no,Cá lóc cắt khúc,Cố tình hết hàng để test failure
+I015,Cá lóc cắt khúc,Cá/Hải sản,500,gram,90000,yes,no,Cá basa phi lê,Canh chua/kho
+I016,Tôm tươi,Cá/Hải sản,300,gram,95000,yes,no,Thịt heo xay,Canh/xào
+I017,Mực ống,Cá/Hải sản,300,gram,90000,yes,no,Tôm tươi,Xào
+I018,Trứng gà,Trứng,10,piece,35000,yes,yes,Trứng vịt,Món nhanh
+I019,Đậu phụ trắng,Đậu/Chay,300,gram,15000,yes,no,Đậu phụ non,Kho/sốt/canh
+I020,Đậu phụ non,Đậu/Chay,300,gram,18000,yes,no,Đậu phụ trắng,"Sốt cà chua, canh"
+I021,Cà chua,Rau củ,500,gram,18000,yes,yes,Sốt cà chua,Sốt/canh
+I022,Rau cải ngọt,Rau,500,gram,22000,yes,yes,Rau muống,Luộc/xào/canh
+I023,Rau muống,Rau,500,gram,18000,yes,yes,Rau cải ngọt,Luộc/xào
+I024,Bắp cải,Rau củ,700,gram,25000,yes,yes,Cải thảo,Xào/canh
+I025,Cải thảo,Rau,500,gram,26000,yes,yes,Bắp cải,Canh/lẩu
+I026,Cà rốt,Rau củ,500,gram,20000,yes,yes,Khoai tây,Xào/canh
+I027,Khoai tây,Rau củ,500,gram,25000,yes,yes,Cà rốt,Hầm/cà ri
+I028,Hành tây,Rau củ,500,gram,22000,yes,yes,Hành tím,Xào/sốt
+I029,Dưa leo,Rau củ,500,gram,18000,yes,yes,Xà lách,Salad
+I030,Xà lách,Rau,300,gram,25000,yes,yes,Dưa leo,Salad
+I031,Nấm kim châm,Nấm,200,gram,25000,yes,yes,Nấm hương,Lẩu/xào
+I032,Nấm hương,Nấm,100,gram,35000,yes,no,Nấm kim châm,Miến/canh
+I033,Giá đỗ,Rau,300,gram,12000,yes,yes,Rau thơm,Canh chua/xào
+I034,Dứa gọt sẵn,Rau củ,300,gram,22000,yes,yes,Me chua,Canh chua
+I035,Bí đỏ,Rau củ,500,gram,25000,yes,yes,Khoai tây,Canh/hầm
+I036,Rau thơm,Rau gia vị,100,gram,10000,yes,yes,Hành lá,"Canh, ăn kèm"
+I037,Hành lá,Rau gia vị,100,gram,8000,yes,yes,Rau thơm,Gia vị
+I038,Tỏi,Gia vị,100,gram,10000,yes,no,Hành tím,Gia vị
+I039,Hành tím,Gia vị,100,gram,10000,yes,no,Tỏi,Gia vị
+I040,Gừng,Gia vị,100,gram,12000,yes,no,Hành tím,Gà/cá
+I041,Ớt tươi,Gia vị,100,gram,8000,yes,no,Tiêu,Loại nếu user không ăn cay
+I042,Me chua vắt,Gia vị,100,gram,12000,yes,no,Dứa,Canh chua
+I043,Nước mắm,Gia vị,500,ml,30000,yes,no,Xì dầu,Gia vị cơ bản
+I044,Xì dầu,Gia vị,500,ml,28000,yes,no,Nước mắm,Món chay/xào
+I045,Dầu ăn,Gia vị,1000,ml,55000,yes,no,Bơ,Chiên/xào
+I046,Dầu hào,Gia vị,350,ml,32000,yes,no,Xì dầu,Xào
+I047,Đường,Gia vị,1000,gram,28000,yes,no,Mật ong,Gia vị
+I048,Muối,Gia vị,500,gram,7000,yes,no,Hạt nêm,Gia vị
+I049,Tiêu xay,Gia vị,50,gram,25000,yes,no,Ớt tươi,Gia vị
+I050,Hạt nêm,Gia vị,400,gram,35000,yes,no,Muối,Gia vị

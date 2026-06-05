@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ Lý Đi Chợ 1 Chạm - Real AI</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .mobile-frame {
+            width: 375px;
+            height: 812px;
+            background: #f8f9fa;
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            border: 12px solid #212529;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: #00a046;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            padding-top: 40px;
+        }
+
+        .screen {
+            display: none;
+            flex: 1;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .active {
+            display: flex;
+        }
+
+        /* Chat */
+        .chat-container {
+            flex: 1;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow-y: auto;
+        }
+
+        .msg {
+            padding: 12px 16px;
+            border-radius: 20px;
+            max-width: 80%;
+            line-height: 1.4;
+            font-size: 15px;
+        }
+
+        .msg.bot {
+            background: white;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            border: 1px solid #e9ecef;
+        }
+
+        .msg.user {
+            background: #00a046;
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-input-area {
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #dee2e6;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            border: 1px solid #ced4da;
+            border-radius: 20px;
+            padding: 10px 15px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .chat-input-area button {
+            background: #00a046;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Cart */
+        .cart-container {
+            padding: 15px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .alert-banner {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            border: 1px solid transparent;
+        }
+
+        .alert-banner.success {
+            background: #e2e3e5;
+            color: #383d41;
+            border-color: #d6d8db;
+        }
+
+        .alert-banner.danger {
+            background: #f8d7da;
+            color: #721c24;
+            border-color: #f5c6cb;
+            font-weight: bold;
+        }
+
+        .cart-item {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .item-info h4 {
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: #212529;
+        }
+
+        .item-info p {
+            font-size: 13px;
+            color: #6c757d;
+        }
+
+        .item-tag {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-top: 4px;
+            font-weight: bold;
+        }
+
+        .item-price {
+            font-weight: bold;
+            color: #00a046;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: #00a046;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .checkout-btn.disabled {
+            background: #dc3545;
+            cursor: not-allowed;
+        }
+
+        /* Success */
+        .success-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            text-align: center;
+            background: white;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #00a046;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .typing {
+            display: none;
+            color: #6c757d;
+            font-size: 13px;
+            font-style: italic;
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        .cart-item h4 {
+            margin: 0 0 5px 0;
+            color: #212529;
+        }
+
+        .cart-item p {
+            margin: 0;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+
+        .quick-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: #20c997;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(32, 201, 151, 0.3);
+            transition: 0.2s;
+        }
+
+        .quick-btn:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mobile-frame">
+        <div class="header">Grocery AI</div>
+
+        <!-- Màn hình Chat -->
+        <div id="screen-chat" class="screen active">
+            <div
+                style="padding: 10px 15px; background: #e8f5e9; font-size: 14px; border-bottom: 1px solid #c8e6c9; display: flex; align-items: center; justify-content: space-between;">
+                <b>👤 User Demo:</b>
+                <select id="userSelect"
+                    style="padding: 5px; border-radius: 5px; outline: none; border: 1px solid #00a046; background: white;">
+                    <option value="lan">Lan (Dị ứng tôm, thích ăn nhiều hành)</option>
+                    <option value="bach">Bách (Ghét hành lá, thích ăn thịt bò)</option>
+                </select>
+            </div>
+            <div class="chat-container" id="chatHistory">
+                <div class="msg bot">Chào bạn! Nhà mình đang có sẵn nguyên liệu gì, hay bạn muốn nấu món gì tối nay với
+                    ngân sách bao nhiêu?</div>
+            </div>
+            <div class="typing" id="typingIndicator">AI đang suy nghĩ và nhặt đồ...</div>
+            <div class="chat-input-area">
+                <input type="text" placeholder="Ví dụ: Nhà có trứng, mâm cơm 100k" id="chatInput">
+                <button onclick="sendPrompt()">➤</button>
+            </div>
+        </div>
+
+        <!-- Màn hình Giỏ hàng (Tạo động bằng JS) -->
+        <div id="screen-cart" class="screen">
+            <div style="padding: 15px 15px 0 15px;">
+                <button onclick="switchScreen('screen-chat')"
+                    style="background: none; border: none; font-size: 16px; color: #00a046; cursor: pointer; font-weight: bold;">←
+                    Quay lại sửa đơn</button>
+            </div>
+            <div class="cart-container">
+                <div id="alertBanner" class="alert-banner"></div>
+                <div id="cartItemsList"></div>
+            </div>
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Tổng cộng:</span>
+                    <span id="totalPriceText">0đ</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn" onclick="startOrderSimulation()">Thanh toán qua
+                    MoMo</button>
+            </div>
+        </div>
+
+        <!-- Màn hình Thành công -->
+        <div id="screen-success" class="screen">
+            <div class="success-container">
+                <div class="success-icon">✓</div>
+                <h2 style="color: #00a046;">Thanh toán thành công!</h2>
+                <p id="orderStatusText" style="color: #6c757d; margin-top: 15px; font-weight: 500; font-size: 16px;">
+                    Nhân viên Bách Hóa Xanh đang nhặt đồ...</p>
+                <div
+                    style="width: 100%; background: #e9ecef; height: 8px; border-radius: 4px; margin-top: 15px; overflow: hidden;">
+                    <div id="orderProgressBar"
+                        style="width: 33%; background: #00a046; height: 100%; transition: width 1s ease-in-out;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'https://apitest.solanai.us';
+
+        function switchScreen(screenId) {
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        // Add event listener for profile switch to clear chat history
+        document.getElementById('userSelect').addEventListener('change', () => {
+            window.chatHistory = [];
+            document.getElementById('chatHistory').innerHTML = '<div class="msg bot">Chào bạn! Nhà mình đang có sẵn nguyên liệu gì, hay bạn muốn nấu món gì tối nay với ngân sách bao nhiêu?</div>';
+        });
+
+        // Add Enter key listener to input
+        document.getElementById('chatInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                sendPrompt();
+            }
+        });
+
+        function startOrderSimulation() {
+            // Chuyển sang màn hình thành công
+            switchScreen('screen-success');
+
+            const statusText = document.getElementById('orderStatusText');
+            const progressBar = document.getElementById('orderProgressBar');
+
+            // Trạng thái 1
+            statusText.innerText = "🛒 Nhân viên đang nhặt đồ...";
+            progressBar.style.width = "33%";
+
+            // Trạng thái 2: Sau 3 giây
+            setTimeout(() => {
+                statusText.innerText = "📦 Đang đóng gói...";
+                progressBar.style.width = "66%";
+            }, 3000);
+
+            // Trạng thái 3: Sau 6 giây
+            setTimeout(() => {
+                statusText.innerText = "🏍️ Shipper đang giao hàng...";
+                progressBar.style.width = "100%";
+            }, 6000);
+        }
+
+        // Biến lưu trữ lịch sử chat ở Frontend
+        window.chatHistory = [];
+
+        async function sendPrompt() {
+            const input = document.getElementById('chatInput');
+            const userText = input.value.trim();
+            if (!userText) return;
+
+            // Hiện tin nhắn User lên màn hình
+            document.getElementById('chatHistory').innerHTML += `<div class="msg user">${userText}</div>`;
+            input.value = '';
+
+            // Lưu vào lịch sử
+            window.chatHistory.push({ role: "user", content: userText });
+
+            // Hiện hiệu ứng typing
+            const typing = document.getElementById('typingIndicator');
+            typing.style.display = 'block';
+
+            // Lấy thông tin User (Lan/Bách)
+            const selectedUser = document.getElementById('userSelect').value;
+
+            try {
+                // Gọi tới Backend Python (Flask)
+                const response = await fetch(`${API_BASE_URL}/chat`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        profile: selectedUser,
+                        history: window.chatHistory
+                    })
+                });
+
+                const data = await response.json();
+                typing.style.display = 'none';
+
+                if (data.error) {
+                    alert("Lỗi Backend: " + data.error);
+                    return;
+                }
+
+                // Hiện câu trả lời của AI
+                if (data.reply) {
+                    // Nếu chưa chốt đơn, và AI có đưa ra báo giá (có chữ đ/k sau số) thì mới hiển thị nút Đồng ý nhanh
+                    let extraBtn = "";
+                    const hasPrice = /\d+(?:000đ|000|k|đ)/i.test(data.reply);
+                    if (!data.cart && hasPrice) {
+                        extraBtn = `<br><button class="quick-btn" onclick="document.getElementById('chatInput').value='Đồng ý chốt đơn'; sendPrompt()">✅ Đồng ý chốt đơn</button>`;
+                    }
+
+                    document.getElementById('chatHistory').innerHTML += `<div class="msg bot">${data.reply.replace(/\n/g, '<br>')}${extraBtn}</div>`;
+                    window.chatHistory.push({ role: "assistant", content: data.reply });
+
+                    // Tự động cuộn xuống cuối chat
+                    const chatContainer = document.getElementById('chatHistory');
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                }
+
+                // Nếu AI có gọi hàm chốt đơn, Backend sẽ trả về biến 'cart'
+                if (data.cart) {
+                    renderCart(data.reply, data.cart);
+                    switchScreen('screen-cart');
+                }
+
+            } catch (error) {
+                typing.style.display = 'none';
+                alert("Không thể kết nối tới Backend! Đảm bảo bạn đã chạy 'python app.py' nhé.");
+            }
+        }
+
+        function renderCart(message, cartData) {
+            const listDiv = document.getElementById('cartItemsList');
+            const banner = document.getElementById('alertBanner');
+            const totalText = document.getElementById('totalPriceText');
+            const btn = document.getElementById('checkoutBtn');
+
+            listDiv.innerHTML = '';
+
+            // Render từng món hàng
+            cartData.items.forEach(item => {
+                listDiv.innerHTML += `
+                <div class="cart-item">
+                    <div class="item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.weight}</p>
+                    </div>
+                    <div class="item-price">${item.price.toLocaleString('vi-VN')}đ</div>
+                </div>
+            `;
+            });
+
+            totalText.innerText = cartData.total_price.toLocaleString('vi-VN') + 'đ';
+
+            // Xử lý Giao diện Dựa trên Status Backend trả về
+            if (cartData.status === 'failed') {
+                banner.className = 'alert-banner danger';
+                banner.innerHTML = '⚠️ <b>Cảnh báo Vượt Ngân Sách!</b><br>' + cartData.message;
+                btn.className = 'checkout-btn disabled';
+                btn.innerText = 'Vượt ngân sách (Sửa giỏ hàng)';
+                totalText.style.color = '#dc3545';
+            } else {
+                banner.className = 'alert-banner success';
+                banner.innerHTML = `💡 <b>Đơn hàng đã được ghi nhận!</b><br>Trạng thái: ${cartData.order_status}<br>Mã thanh toán: <b>${cartData.payment_code}</b>`;
+                btn.className = 'checkout-btn';
+                btn.innerText = 'Thanh toán qua MoMo';
+                totalText.style.color = '#212529';
+            }
+        }
+    </script>
+</body>
+
+</html> if (lines[i].toLowerCase().includes('k') && tVal < 1000) tVal *=1000; let newTotal=tVal - removedPrice;
+    lines[i]=lines[i].replace(tMatch[1], newTotal.toLocaleString('vi-VN')); } } } const newText=lines.join('\\n');
+    window.chatHistory[lastAsstIndex].content=newText; let formattedReply=lines.map((line)=> {
+    if (/^(\\d+\\.|-|\\+)\\s+/.test(line.trim()) && /[\\d\\.\\,]+\\s*(?:đ|vnđ|k)/i.test(line)) {
+    return `<div class="ai-list-item"
+        style="display:flex; justify-content:space-between; align-items:center; margin: 4px 0; background: #f8f9fa; padding: 4px 8px; border-radius: 4px;">
+        <span class="item-text">${line}</span>
+        <button onclick="removeChatLine(this)"
+            style="background: #ff4d4f; color: white; border: none; border-radius: 50%; width: 20px; height: 20px; cursor: pointer; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 10px;">✕</button>
+    </div>`;
+    }
+    return `<div>${line}</div>`;
+    }).join('');
+
+    let extraBtn = "";
+    const textLower = newText.toLowerCase();
+    const hasPrice = textLower.includes('tổng') || textLower.includes('đơn giá') ||
+    /\\d+(?:000|k|đ|vnđ|\\.000|,000)/i.test(newText);
+    if (hasPrice) {
+    extraBtn = `<br><button class="quick-btn"
+        onclick="document.getElementById('chatInput').value='Đồng ý chốt đơn'; sendPrompt()">✅ Đồng ý chốt
+        đơn</button>`;
+    }
+
+    const msgBlock = itemDiv.closest('.msg.bot');
+    msgBlock.innerHTML = formattedReply + extraBtn;
+    }
+
+    function renderCart() {
+    if (!currentCart) return;
+    const listDiv = document.getElementById('cartItemsList');
+    const banner = document.getElementById('alertBanner');
+    const totalText = document.getElementById('totalPriceText');
+    const btn = document.getElementById('checkoutBtn');
+
+    listDiv.innerHTML = '';
+
+    // Render từng món hàng
+    currentCart.items.forEach((item, index) => {
+    listDiv.innerHTML += `
+    <div class="cart-item">
+        <div class="item-info">
+            <h4>${item.name}</h4>
+            <p>${item.weight}</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <div class="item-price">${item.price.toLocaleString('vi-VN')}đ</div>
+            <button onclick="removeCartItem(${index})"
+                style="background: #ff4d4f; color: white; border: none; border-radius: 50%; width: 24px; height: 24px; cursor: pointer; font-weight: bold; display: flex; align-items: center; justify-content: center;">✕</button>
+        </div>
+    </div>
+    `;
+    });
+
+    totalText.innerText = currentCart.total_price.toLocaleString('vi-VN') + 'đ';
+
+    // Xử lý Giao diện Dựa trên Status Backend trả về
+    if (currentCart.status === 'failed') {
+    banner.className = 'alert-banner danger';
+    banner.innerHTML = '⚠️ <b>Cảnh báo Vượt Ngân Sách!</b><br>' + currentCart.message;
+    btn.className = 'checkout-btn disabled';
+    btn.innerText = 'Vượt ngân sách (Sửa giỏ hàng)';
+    totalText.style.color = '#dc3545';
+    } else {
+    banner.className = 'alert-banner success';
+    banner.innerHTML = `💡 <b>Đơn hàng đã được ghi nhận!</b><br>Trạng thái: ${currentCart.order_status}<br>Mã thanh
+    toán: <b>${currentCart.payment_code}</b>`;
+    btn.className = 'checkout-btn';
+    btn.innerText = 'Thanh toán qua MoMo';
+    totalText.style.color = '#212529';
+    }
+    }
+    </script>
+    </body>
+
+    </html>

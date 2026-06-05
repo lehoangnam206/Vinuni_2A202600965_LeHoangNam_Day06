@@ -1,0 +1,272 @@
+﻿recipe_id,ingredient_id,ingredient_name,sequence_no,quantity_for_base_servings,quantity_unit,required_or_optional,role
+R001,I020,Đậu phụ non,1,300,gram,required,nguyên liệu chính
+R001,I021,Cà chua,2,300,gram,required,sốt
+R001,I037,Hành lá,3,20,gram,optional,gia vị
+R001,I038,Tỏi,4,10,gram,optional,gia vị
+R001,I043,Nước mắm,5,15,ml,optional,nêm
+R001,I047,Đường,6,5,gram,optional,nêm
+R002,I018,Trứng gà,1,4,piece,required,nguyên liệu chính
+R002,I037,Hành lá,2,20,gram,optional,gia vị
+R002,I043,Nước mắm,3,10,ml,optional,nêm
+R002,I049,Tiêu xay,4,2,gram,optional,nêm
+R002,I045,Dầu ăn,5,20,ml,required,chiên
+R003,I014,Cá basa phi lê,1,300,gram,required,nguyên liệu chính
+R003,I021,Cà chua,2,250,gram,required,rau củ
+R003,I034,Dứa gọt sẵn,3,150,gram,required,tạo vị chua
+R003,I042,Me chua vắt,4,40,gram,required,tạo vị chua
+R003,I033,Giá đỗ,5,100,gram,optional,ăn kèm
+R003,I036,Rau thơm,6,50,gram,optional,rau thơm
+R003,I041,Ớt tươi,7,10,gram,optional,cay
+R003,I043,Nước mắm,8,20,ml,required,nêm
+R003,I047,Đường,9,10,gram,optional,nêm
+R004,I011,Thịt bò thái lát,1,250,gram,required,nguyên liệu chính
+R004,I022,Rau cải ngọt,2,400,gram,required,rau
+R004,I038,Tỏi,3,15,gram,required,gia vị
+R004,I046,Dầu hào,4,20,ml,optional,nêm
+R004,I044,Xì dầu,5,15,ml,optional,nêm
+R004,I045,Dầu ăn,6,20,ml,required,xào
+R005,I007,Thịt heo xay,1,150,gram,required,nguyên liệu chính
+R005,I022,Rau cải ngọt,2,400,gram,required,rau
+R005,I037,Hành lá,3,20,gram,optional,gia vị
+R005,I043,Nước mắm,4,20,ml,required,nêm
+R005,I050,Hạt nêm,5,5,gram,optional,nêm
+R006,I009,Thịt nạc vai heo,1,250,gram,required,nguyên liệu chính
+R006,I031,Nấm kim châm,2,200,gram,required,nấm
+R006,I028,Hành tây,3,150,gram,optional,rau củ
+R006,I038,Tỏi,4,15,gram,required,gia vị
+R006,I046,Dầu hào,5,20,ml,optional,nêm
+R006,I045,Dầu ăn,6,20,ml,required,xào
+R007,I013,Đùi gà,1,400,gram,required,nguyên liệu chính
+R007,I040,Gừng,2,30,gram,required,gia vị
+R007,I039,Hành tím,3,15,gram,optional,gia vị
+R007,I043,Nước mắm,4,25,ml,required,nêm
+R007,I047,Đường,5,10,gram,optional,tạo màu
+R007,I045,Dầu ăn,6,15,ml,required,rang
+R008,I001,Gạo ST25,1,250,gram,required,cơm
+R008,I018,Trứng gà,2,3,piece,required,nguyên liệu chính
+R008,I037,Hành lá,3,20,gram,optional,gia vị
+R008,I026,Cà rốt,4,100,gram,optional,rau củ
+R008,I045,Dầu ăn,5,20,ml,required,rang
+R008,I044,Xì dầu,6,15,ml,optional,nêm
+R009,I003,Mì spaghetti,1,200,gram,required,tinh bột
+R009,I011,Thịt bò thái lát,2,200,gram,required,đạm
+R009,I021,Cà chua,3,250,gram,required,sốt
+R009,I028,Hành tây,4,150,gram,required,sốt
+R009,I038,Tỏi,5,15,gram,required,gia vị
+R009,I045,Dầu ăn,6,15,ml,required,xào
+R009,I049,Tiêu xay,7,2,gram,optional,nêm
+R010,I016,Tôm tươi,1,250,gram,required,hải sản
+R010,I017,Mực ống,2,250,gram,optional,hải sản
+R010,I025,Cải thảo,3,300,gram,required,rau
+R010,I031,Nấm kim châm,4,200,gram,required,nấm
+R010,I021,Cà chua,5,200,gram,required,nước lẩu
+R010,I034,Dứa gọt sẵn,6,150,gram,optional,vị chua
+R010,I041,Ớt tươi,7,20,gram,optional,cay
+R010,I042,Me chua vắt,8,50,gram,required,vị chua
+R011,I035,Bí đỏ,1,400,gram,required,rau củ
+R011,I007,Thịt heo xay,2,150,gram,required,đạm
+R011,I037,Hành lá,3,20,gram,optional,gia vị
+R011,I043,Nước mắm,4,15,ml,required,nêm
+R011,I050,Hạt nêm,5,5,gram,optional,nêm
+R012,I023,Rau muống,1,500,gram,required,rau
+R012,I038,Tỏi,2,20,gram,required,gia vị
+R012,I045,Dầu ăn,3,20,ml,required,xào
+R012,I043,Nước mắm,4,10,ml,optional,nêm
+R013,I010,Sườn non heo,1,500,gram,required,nguyên liệu chính
+R013,I027,Khoai tây,2,400,gram,required,rau củ
+R013,I026,Cà rốt,3,250,gram,required,rau củ
+R013,I039,Hành tím,4,20,gram,optional,gia vị
+R013,I050,Hạt nêm,5,10,gram,required,nêm
+R014,I008,Thịt ba chỉ heo,1,400,gram,required,nguyên liệu chính
+R014,I049,Tiêu xay,2,5,gram,required,gia vị
+R014,I043,Nước mắm,3,30,ml,required,nêm
+R014,I047,Đường,4,15,gram,required,tạo màu
+R014,I039,Hành tím,5,15,gram,optional,gia vị
+R015,I012,Ức gà,1,300,gram,required,nguyên liệu chính
+R015,I030,Xà lách,2,200,gram,required,salad
+R015,I029,Dưa leo,3,200,gram,required,salad
+R015,I021,Cà chua,4,200,gram,optional,salad
+R015,I049,Tiêu xay,5,3,gram,optional,nêm
+R015,I045,Dầu ăn,6,10,ml,required,áp chảo
+R016,I016,Tôm tươi,1,250,gram,required,nguyên liệu chính
+R016,I022,Rau cải ngọt,2,400,gram,required,rau
+R016,I038,Tỏi,3,15,gram,required,gia vị
+R016,I046,Dầu hào,4,15,ml,optional,nêm
+R016,I045,Dầu ăn,5,20,ml,required,xào
+R017,I017,Mực ống,1,300,gram,required,nguyên liệu chính
+R017,I028,Hành tây,2,250,gram,required,rau củ
+R017,I026,Cà rốt,3,100,gram,optional,rau củ
+R017,I038,Tỏi,4,15,gram,required,gia vị
+R017,I046,Dầu hào,5,20,ml,optional,nêm
+R018,I006,Miến dong,1,150,gram,required,tinh bột
+R018,I007,Thịt heo xay,2,180,gram,required,đạm
+R018,I032,Nấm hương,3,50,gram,required,nấm
+R018,I026,Cà rốt,4,100,gram,optional,rau củ
+R018,I037,Hành lá,5,20,gram,optional,gia vị
+R018,I044,Xì dầu,6,20,ml,optional,nêm
+R019,I025,Cải thảo,1,400,gram,required,rau
+R019,I019,Đậu phụ trắng,2,250,gram,required,đậu
+R019,I037,Hành lá,3,20,gram,optional,gia vị
+R019,I050,Hạt nêm,4,5,gram,optional,nêm
+R019,I043,Nước mắm,5,10,ml,optional,nêm
+R020,I015,Cá lóc cắt khúc,1,400,gram,required,nguyên liệu chính
+R020,I049,Tiêu xay,2,5,gram,required,gia vị
+R020,I043,Nước mắm,3,30,ml,required,nêm
+R020,I047,Đường,4,15,gram,required,tạo màu
+R020,I039,Hành tím,5,15,gram,optional,gia vị
+R020,I041,Ớt tươi,6,5,gram,optional,cay
+R021,I002,Bún tươi,1,400,gram,required,tinh bột
+R021,I009,Thịt nạc vai heo,2,250,gram,required,đạm
+R021,I036,Rau thơm,3,50,gram,optional,ăn kèm
+R021,I029,Dưa leo,4,200,gram,optional,ăn kèm
+R021,I038,Tỏi,5,15,gram,required,gia vị
+R021,I043,Nước mắm,6,20,ml,required,nêm
+R022,I002,Bún tươi,1,400,gram,required,tinh bột
+R022,I011,Thịt bò thái lát,2,250,gram,required,đạm
+R022,I022,Rau cải ngọt,3,300,gram,required,rau
+R022,I038,Tỏi,4,15,gram,required,gia vị
+R022,I046,Dầu hào,5,15,ml,optional,nêm
+R023,I002,Bún tươi,1,400,gram,required,tinh bột
+R023,I015,Cá lóc cắt khúc,2,300,gram,required,cá
+R023,I021,Cà chua,3,250,gram,required,nước dùng
+R023,I036,Rau thơm,4,50,gram,optional,ăn kèm
+R023,I043,Nước mắm,5,20,ml,required,nêm
+R024,I004,Mì trứng,1,200,gram,required,tinh bột
+R024,I011,Thịt bò thái lát,2,250,gram,required,đạm
+R024,I025,Cải thảo,3,250,gram,optional,rau
+R024,I038,Tỏi,4,15,gram,required,gia vị
+R024,I046,Dầu hào,5,20,ml,optional,nêm
+R025,I004,Mì trứng,1,200,gram,required,tinh bột
+R025,I031,Nấm kim châm,2,200,gram,required,nấm
+R025,I022,Rau cải ngọt,3,250,gram,required,rau
+R025,I038,Tỏi,4,15,gram,required,gia vị
+R025,I044,Xì dầu,5,20,ml,optional,nêm
+R026,I005,Nui,1,200,gram,required,tinh bột
+R026,I011,Thịt bò thái lát,2,200,gram,required,đạm
+R026,I021,Cà chua,3,250,gram,required,sốt
+R026,I028,Hành tây,4,150,gram,optional,sốt
+R026,I038,Tỏi,5,15,gram,required,gia vị
+R027,I001,Gạo ST25,1,250,gram,required,cơm
+R027,I013,Đùi gà,2,400,gram,required,đạm
+R027,I040,Gừng,3,30,gram,required,gia vị
+R027,I039,Hành tím,4,15,gram,optional,gia vị
+R027,I043,Nước mắm,5,25,ml,required,nêm
+R028,I007,Thịt heo xay,1,250,gram,required,đạm
+R028,I021,Cà chua,2,300,gram,required,sốt
+R028,I028,Hành tây,3,150,gram,optional,sốt
+R028,I038,Tỏi,4,15,gram,required,gia vị
+R028,I045,Dầu ăn,5,15,ml,required,xào
+R029,I019,Đậu phụ trắng,1,300,gram,required,đậu
+R029,I032,Nấm hương,2,50,gram,required,nấm
+R029,I044,Xì dầu,3,25,ml,required,nêm
+R029,I047,Đường,4,5,gram,optional,nêm
+R029,I037,Hành lá,5,20,gram,optional,gia vị
+R030,I016,Tôm tươi,1,250,gram,required,đạm
+R030,I025,Cải thảo,2,400,gram,required,rau
+R030,I037,Hành lá,3,20,gram,optional,gia vị
+R030,I043,Nước mắm,4,15,ml,required,nêm
+R030,I050,Hạt nêm,5,5,gram,optional,nêm
+R031,I011,Thịt bò thái lát,1,250,gram,required,đạm
+R031,I028,Hành tây,2,250,gram,required,rau củ
+R031,I026,Cà rốt,3,150,gram,required,rau củ
+R031,I038,Tỏi,4,15,gram,required,gia vị
+R031,I046,Dầu hào,5,20,ml,optional,nêm
+R032,I012,Ức gà,1,300,gram,required,đạm
+R032,I031,Nấm kim châm,2,200,gram,required,nấm
+R032,I028,Hành tây,3,150,gram,optional,rau củ
+R032,I038,Tỏi,4,15,gram,required,gia vị
+R032,I046,Dầu hào,5,15,ml,optional,nêm
+R033,I018,Trứng gà,1,4,piece,required,đạm
+R033,I030,Xà lách,2,200,gram,required,rau
+R033,I029,Dưa leo,3,200,gram,required,rau củ
+R033,I021,Cà chua,4,200,gram,optional,rau củ
+R033,I049,Tiêu xay,5,2,gram,optional,nêm
+R034,I016,Tôm tươi,1,250,gram,required,đạm
+R034,I021,Cà chua,2,250,gram,required,rau củ
+R034,I034,Dứa gọt sẵn,3,150,gram,required,vị chua
+R034,I042,Me chua vắt,4,40,gram,required,vị chua
+R034,I033,Giá đỗ,5,100,gram,optional,ăn kèm
+R034,I036,Rau thơm,6,50,gram,optional,rau thơm
+R034,I041,Ớt tươi,7,10,gram,optional,cay
+R035,I009,Thịt nạc vai heo,1,250,gram,required,đạm
+R035,I024,Bắp cải,2,400,gram,required,rau
+R035,I038,Tỏi,3,15,gram,required,gia vị
+R035,I046,Dầu hào,4,15,ml,optional,nêm
+R035,I045,Dầu ăn,5,20,ml,required,xào
+R036,I018,Trứng gà,1,4,piece,required,đạm
+R036,I021,Cà chua,2,300,gram,required,sốt
+R036,I037,Hành lá,3,20,gram,optional,gia vị
+R036,I043,Nước mắm,4,10,ml,optional,nêm
+R036,I045,Dầu ăn,5,20,ml,required,chiên/sốt
+R037,I023,Rau muống,1,400,gram,required,rau
+R037,I007,Thịt heo xay,2,150,gram,required,đạm
+R037,I037,Hành lá,3,20,gram,optional,gia vị
+R037,I043,Nước mắm,4,15,ml,required,nêm
+R037,I050,Hạt nêm,5,5,gram,optional,nêm
+R038,I015,Cá lóc cắt khúc,1,400,gram,required,cá
+R038,I034,Dứa gọt sẵn,2,200,gram,required,vị chua
+R038,I021,Cà chua,3,200,gram,optional,rau củ
+R038,I036,Rau thơm,4,50,gram,optional,rau thơm
+R038,I043,Nước mắm,5,20,ml,required,nêm
+R039,I013,Đùi gà,1,500,gram,required,đạm
+R039,I027,Khoai tây,2,400,gram,required,rau củ
+R039,I026,Cà rốt,3,250,gram,required,rau củ
+R039,I039,Hành tím,4,15,gram,optional,gia vị
+R039,I050,Hạt nêm,5,10,gram,required,nêm
+R040,I019,Đậu phụ trắng,1,300,gram,required,đậu
+R040,I044,Xì dầu,2,25,ml,required,nước chấm
+R040,I037,Hành lá,3,20,gram,optional,gia vị
+R040,I045,Dầu ăn,4,50,ml,required,chiên
+R040,I038,Tỏi,5,10,gram,optional,gia vị
+R041,I022,Rau cải ngọt,1,350,gram,required,rau
+R041,I031,Nấm kim châm,2,200,gram,required,nấm
+R041,I038,Tỏi,3,15,gram,required,gia vị
+R041,I044,Xì dầu,4,15,ml,optional,nêm
+R041,I045,Dầu ăn,5,20,ml,required,xào
+R042,I001,Gạo ST25,1,250,gram,required,cơm
+R042,I011,Thịt bò thái lát,2,250,gram,required,đạm
+R042,I018,Trứng gà,3,2,piece,required,đạm
+R042,I028,Hành tây,4,150,gram,optional,rau củ
+R042,I044,Xì dầu,5,15,ml,optional,nêm
+R043,I031,Nấm kim châm,1,200,gram,required,nấm
+R043,I020,Đậu phụ non,2,300,gram,required,đậu
+R043,I037,Hành lá,3,20,gram,optional,gia vị
+R043,I050,Hạt nêm,4,5,gram,optional,nêm
+R043,I043,Nước mắm,5,10,ml,optional,nêm
+R044,I008,Thịt ba chỉ heo,1,300,gram,required,đạm
+R044,I029,Dưa leo,2,300,gram,required,rau củ
+R044,I038,Tỏi,3,15,gram,required,gia vị
+R044,I046,Dầu hào,4,15,ml,optional,nêm
+R044,I045,Dầu ăn,5,15,ml,required,xào
+R045,I002,Bún tươi,1,400,gram,required,tinh bột
+R045,I016,Tôm tươi,2,250,gram,required,đạm
+R045,I036,Rau thơm,3,50,gram,required,rau thơm
+R045,I029,Dưa leo,4,200,gram,optional,ăn kèm
+R045,I043,Nước mắm,5,20,ml,required,nêm
+R046,I005,Nui,1,200,gram,required,tinh bột
+R046,I018,Trứng gà,2,3,piece,required,đạm
+R046,I021,Cà chua,3,250,gram,required,sốt
+R046,I037,Hành lá,4,20,gram,optional,gia vị
+R046,I045,Dầu ăn,5,15,ml,required,xào
+R047,I012,Ức gà,1,300,gram,required,đạm
+R047,I022,Rau cải ngọt,2,350,gram,required,rau
+R047,I038,Tỏi,3,15,gram,required,gia vị
+R047,I046,Dầu hào,4,15,ml,optional,nêm
+R047,I045,Dầu ăn,5,15,ml,required,xào
+R048,I010,Sườn non heo,1,500,gram,required,đạm
+R048,I021,Cà chua,2,250,gram,required,rau củ
+R048,I034,Dứa gọt sẵn,3,150,gram,required,vị chua
+R048,I042,Me chua vắt,4,50,gram,required,vị chua
+R048,I036,Rau thơm,5,50,gram,optional,rau thơm
+R048,I043,Nước mắm,6,20,ml,required,nêm
+R049,I031,Nấm kim châm,1,200,gram,required,nấm
+R049,I032,Nấm hương,2,50,gram,required,nấm
+R049,I020,Đậu phụ non,3,300,gram,required,đậu
+R049,I025,Cải thảo,4,400,gram,required,rau
+R049,I026,Cà rốt,5,150,gram,optional,rau củ
+R049,I044,Xì dầu,6,20,ml,optional,nêm
+R050,I001,Gạo ST25,1,250,gram,required,cơm
+R050,I019,Đậu phụ trắng,2,300,gram,required,đậu
+R050,I031,Nấm kim châm,3,200,gram,required,nấm
+R050,I021,Cà chua,4,300,gram,required,sốt
+R050,I038,Tỏi,5,15,gram,required,gia vị
